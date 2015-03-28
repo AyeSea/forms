@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #create ONLY the routes for GET /users/new and POST /users
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -12,9 +12,13 @@
 	<input type="submit" value="Create Account" />
 
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	
+	<input type="hidden" name="_method" value="patch"	
+
 </form>
 
-<%= form_tag("/users", method: "post") do %>
+
+<%= form_tag("/users", method: "patch") do %>
 	<%= label_tag(:username, "Your Username") %>
 	<%= text_field_tag(:username) %>
 
@@ -40,12 +44,12 @@
 
 	<div>
 	<%= f.label :username, "1. Username Here:" %>
-	<%= f.text_field :username, :value => "Ex: cfiggus" %>
+	<%= f.text_field :username %>
 	</div>
-
+	
 	<div>
 	<%= f.label :email, "2. Email Here:" %>
-	<%= f.email_field :email, :placeholder => "Ex: cyril@figgus.com" %>
+	<%= f.email_field :email %>
 	</div>
 
 	<div>
